@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Programacion_Dirigida_Por_Eventos_Aplicacion_de_Gestion_de_Residuos</string>
+    <string name="cambiar_vista">cambiar_vista</string>
+    <string name="centrar">Centrar</string>
+    <string name="mapa_personalizado">Mapa Personalizado</string>
 </resources>

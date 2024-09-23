@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Contenedor para el mapa personalizado -->
+    <FrameLayout
+        android:id="@+id/map_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/map_controls"
+        android:background="#ADD8E6" /> <!-- Color de fondo del mapa -->
+
+    <!-- Controles del mapa, como botones y texto -->
+    <LinearLayout
+        android:id="@+id/map_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#CCFFFFFF"> <!-- Fondo semitransparente -->
+
+        <!-- Botón para cambiar el tipo de vista -->
+        <Button
+            android:id="@+id/btn_change_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/cambiar_vista" />
+
+        <!-- Slider para hacer zoom en el mapa -->
+        <SeekBar
+            android:id="@+id/zoom_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="20" />
+
+        <!-- Botón para centrarse en un punto de interés -->
+        <Button
+            android:id="@+id/btn_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/centrar" />
+    </LinearLayout>
+
+    <!-- Título del mapa -->
+    <TextView
+        android:id="@+id/map_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/mapa_personalizado"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:background="#CCFFFFFF" /> <!-- Fondo semitransparente -->
+
+</RelativeLayout>
