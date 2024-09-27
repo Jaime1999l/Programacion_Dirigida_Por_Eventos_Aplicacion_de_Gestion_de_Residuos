@@ -7,8 +7,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId =
-            "com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos"
+        applicationId = "com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos"
         minSdk = 30
         targetSdk = 34
         versionCode = 1
@@ -33,7 +32,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
