@@ -1,61 +1,92 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#E0F7FA">
 
-    <!-- Contenedor para el mapa personalizado -->
-    <FrameLayout
-        android:id="@+id/map_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/map_controls"
-        android:background="#ADD8E6" /> <!-- Color de fondo del mapa -->
-
-    <!-- Controles del mapa, como botones y texto -->
-    <LinearLayout
-        android:id="@+id/map_controls"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:background="#CCFFFFFF"> <!-- Fondo semitransparente -->
-
-        <!-- Botón para cambiar el tipo de vista -->
-        <Button
-            android:id="@+id/btn_change_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="@string/cambiar_vista" />
-
-        <!-- Slider para hacer zoom en el mapa -->
-        <SeekBar
-            android:id="@+id/zoom_slider"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:max="20" />
-
-        <!-- Botón para centrarse en un punto de interés -->
-        <Button
-            android:id="@+id/btn_center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="@string/centrar" />
-    </LinearLayout>
-
-    <!-- Título del mapa -->
+    <!-- Título del Mapa -->
     <TextView
         android:id="@+id/map_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="@string/mapa_personalizado"
+        android:text="Mapa de Puntos de Reciclaje"
         android:textSize="24sp"
-        android:textStyle="bold"
         android:textColor="#000000"
-        android:background="#CCFFFFFF" /> <!-- Fondo semitransparente -->
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium" />
 
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/map_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encuentra y agrega puntos de reciclaje fácilmente."
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_below="@id/map_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif" />
+
+
+    <!-- Contenedor del mapa con estilo -->
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/map_container_background"
+        android:elevation="8dp"
+        android:layout_margin="16dp"
+        android:clipChildren="true">
+
+        <!-- Imagen del mapa -->
+        <ImageView
+            android:id="@+id/map_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="matrix"
+            android:src="@drawable/mapa_madrid" />
+
+        <!-- Cursor semitransparente para indicar dónde se añadirá el punto de reciclaje -->
+        <ImageView
+            android:id="@+id/cursor_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_cursor"
+            android:alpha="0.5"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <!-- Botón para centrar la imagen -->
+    <Button
+        android:id="@+id/center_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map_container"
+        android:layout_centerHorizontal="true"
+        android:text="Centrar Imagen"
+        android:background="@drawable/button_background"
+        android:textColor="@drawable/button_text_color"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Botón para agregar un punto de reciclaje -->
+    <Button
+        android:id="@+id/add_recycle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/center_button"
+        android:layout_centerHorizontal="true"
+        android:text="Agregar Punto de Reciclaje"
+        android:background="@drawable/button_background"
+        android:textColor="@drawable/button_text_color"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium" />
 </RelativeLayout>
