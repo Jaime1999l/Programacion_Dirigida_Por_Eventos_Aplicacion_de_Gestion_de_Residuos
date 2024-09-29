@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);  // Asegúrate de que esté vinculado a activity_main.xml
+        setContentView(R.layout.activity_main);
 
         // Saludo personalizado
         TextView greetingTextView = findViewById(R.id.greeting_text_view);
@@ -48,10 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        // Si necesitas añadir lógica para la imagen (aunque en este caso no es necesario)
         ImageView imageView = findViewById(R.id.imageView);
         imageView.setImageResource(R.drawable.reciclaje);
-        // Puedes agregar algún comportamiento si es necesario
     }
 }
