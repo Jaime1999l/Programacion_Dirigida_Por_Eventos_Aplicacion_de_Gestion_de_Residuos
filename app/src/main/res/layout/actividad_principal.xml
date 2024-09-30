@@ -1,51 +1,53 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:gravity="center_horizontal"
-              android:padding="16dp">
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <!-- Título o saludo personalizado -->
-    <TextView
+    <!-- Main content layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- Saludo personalizado -->
+        <TextView
             android:id="@+id/greeting_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="¡Bienvenido a la aplicación de recogida de residuos!"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp" />
 
-    <!-- Imagen de reciclaje centrada -->
-    <ImageView
+        <!-- Imagen de reciclaje centrada -->
+        <ImageView
             android:id="@+id/recycling_image"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:src="@drawable/reciclaje"
             android:contentDescription="Imagen de reciclaje"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
-    <!-- Botón para ir al Calendario -->
-    <Button
-            android:id="@+id/calendar_button"
+        <!-- Botón para abrir el menú -->
+        <Button
+            android:id="@+id/open_menu_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calendario de recolección"
-            android:layout_marginTop="24dp"/>
+            android:text="Abrir menú"
+            android:layout_marginTop="24dp" />
 
-    <!-- Botón para ir al Mapa -->
-    <Button
-            android:id="@+id/map_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mapa de puntos de reciclaje"
-            android:layout_marginTop="16dp"/>
+    </LinearLayout>
 
-    <!-- Botón para ir a las Estadísticas -->
-    <Button
-            android:id="@+id/stats_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Estadísticas de reciclaje"
-            android:layout_marginTop="16dp"/>
+    <!-- Menú desplegable (NavigationView) -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/white"
+        app:menu="@menu/drawer_menu" />
 
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
