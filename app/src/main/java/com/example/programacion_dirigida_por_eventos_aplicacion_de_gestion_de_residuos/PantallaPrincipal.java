@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity.StatsActivity;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity.CalendarActivity;
 import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity.MapActivity;
 import com.google.android.material.navigation.NavigationView;
 
@@ -39,16 +41,16 @@ public class PantallaPrincipal extends AppCompatActivity {
             int id = item.getItemId();
             switch (id) {
                 case R.id.nav_calendar:
-                    /*Intent calendarIntent = new Intent(PantallaPrincipal.this, CalendarActivity.class);
-                    startActivity(calendarIntent);*/
+                    Intent calendarIntent = new Intent(PantallaPrincipal.this, CalendarActivity.class);
+                    startActivity(calendarIntent);
                     break;
                 case R.id.nav_map:
                     Intent mapIntent = new Intent(PantallaPrincipal.this, MapActivity.class);
                     startActivity(mapIntent);
                     break;
                 case R.id.nav_stats:
-                    /*Intent statsIntent = new Intent(PantallaPrincipal.this, StatsActivity.class);
-                    startActivity(statsIntent);*/
+                    Intent statsIntent = new Intent(PantallaPrincipal.this, StatsActivity.class);
+                    startActivity(statsIntent);
                     break;
             }
             drawerLayout.closeDrawers(); // Cierra el menú después de hacer clic
