@@ -14,7 +14,7 @@
 
         <!-- Declarar la actividad principal -->
         <activity
-            android:name="com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.GestorResiduosMain"
+            android:name="com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.PantallaPrincipal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
