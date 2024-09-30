@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Main content layout -->
+    <!-- Contenido principal -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -40,14 +40,50 @@
 
     </LinearLayout>
 
-    <!-- Menú desplegable (NavigationView) -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
+    <!-- Menú personalizado -->
+    <LinearLayout
+        android:id="@+id/menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
+        android:orientation="vertical"
         android:background="@android:color/white"
-        app:menu="@menu/drawer_menu" />
+        android:padding="16dp">
+
+        <!-- Opción del menú: Calendario -->
+        <TextView
+            android:id="@+id/nav_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:text="Calendario de recolección"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:drawablePadding="10dp" />
+
+        <!-- Opción del menú: Mapa -->
+        <TextView
+            android:id="@+id/nav_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_map"
+            android:text="Mapa de puntos de reciclaje"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:drawablePadding="10dp" />
+
+        <!-- Opción del menú: Estadísticas -->
+        <TextView
+            android:id="@+id/nav_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_stats"
+            android:text="Estadísticas de reciclaje"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:drawablePadding="10dp" />
+
+    </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
+

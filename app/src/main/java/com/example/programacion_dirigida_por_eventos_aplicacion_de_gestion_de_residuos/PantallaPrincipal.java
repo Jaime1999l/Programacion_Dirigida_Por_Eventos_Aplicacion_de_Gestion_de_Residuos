@@ -32,32 +32,35 @@ public class PantallaPrincipal extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.recycling_image);
         imageView.setImageResource(R.drawable.reciclaje);
 
-        // Configuración del menú desplegable (NavigationView)
+        // Configuración del menú desplegable (LinearLayout)
         drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
 
-        // Manejador de clicks para los elementos del menú
-        navigationView.setNavigationItemSelectedListener(item -> {
-            int id = item.getItemId();
-            switch (id) {
-                case R.id.nav_calendar:
-                    Intent calendarIntent = new Intent(PantallaPrincipal.this, CalendarActivity.class);
-                    startActivity(calendarIntent);
-                    break;
-                case R.id.nav_map:
-                    Intent mapIntent = new Intent(PantallaPrincipal.this, MapActivity.class);
-                    startActivity(mapIntent);
-                    break;
-                case R.id.nav_stats:
-                    Intent statsIntent = new Intent(PantallaPrincipal.this, StatsActivity.class);
-                    startActivity(statsIntent);
-                    break;
-            }
-            drawerLayout.closeDrawers(); // Cierra el menú después de hacer clic
-            return true;
+        // Opción del menú: Calendario
+        TextView navCalendar = findViewById(R.id.nav_calendar);
+        navCalendar.setOnClickListener(v -> {
+            Intent calendarIntent = new Intent(PantallaPrincipal.this, CalendarActivity.class);
+            startActivity(calendarIntent);
+            drawerLayout.closeDrawers(); // Cerrar el menú
         });
+
+        // Opción del menú: Mapa
+        TextView navMap = findViewById(R.id.nav_map);
+        navMap.setOnClickListener(v -> {
+            Intent mapIntent = new Intent(PantallaPrincipal.this, MapActivity.class);
+            startActivity(mapIntent);
+            drawerLayout.closeDrawers(); // Cerrar el menú
+        });
+
+        // Opción del menú: Estadísticas
+        TextView navStats = findViewById(R.id.nav_stats);
+        navStats.setOnClickListener(v -> {
+            Intent statsIntent = new Intent(PantallaPrincipal.this, StatsActivity.class);
+            startActivity(statsIntent);
+            drawerLayout.closeDrawers(); // Cerrar el menú
+        });
+
         // Botón para abrir el menú
         Button openMenuButton = findViewById(R.id.open_menu_button);
-        openMenuButton.setOnClickListener(v -> drawerLayout.openDrawer(navigationView));
+        openMenuButton.setOnClickListener(v -> drawerLayout.openDrawer(findViewById(R.id.menu_layout)));
     }
 }

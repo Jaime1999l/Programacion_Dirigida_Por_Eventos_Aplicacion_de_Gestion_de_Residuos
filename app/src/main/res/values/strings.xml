@@ -3,4 +3,6 @@
     <string name="cambiar_vista">cambiar_vista</string>
     <string name="centrar">Centrar</string>
     <string name="mapa_personalizado">Mapa Personalizado</string>
+    <string name="greeting_text">¡Bienvenido a la aplicación de recogida de residuos!</string>
+    <string name="open_menu_button">Abrir menú</string>
 </resources>
