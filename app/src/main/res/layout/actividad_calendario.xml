@@ -1,0 +1,29 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- CalendarView para mostrar las fechas -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Texto que mostrará la próxima fecha de recolección -->
+    <TextView
+        android:id="@+id/nextCollectionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Próxima recolección:"
+        android:textSize="18sp" />
+
+    <!-- Botón para agregar recordatorio manualmente -->
+    <Button
+        android:id="@+id/setReminderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar recordatorio" />
+</LinearLayout>
