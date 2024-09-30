@@ -5,4 +5,16 @@
     <string name="mapa_personalizado">Mapa Personalizado</string>
     <string name="greeting_text">¡Bienvenido a la aplicación de recogida de residuos!</string>
     <string name="open_menu_button">Abrir menú</string>
+    <string name="hint_fecha">Fecha (YYYY-MM-DD)</string>
+    <string name="hint_bolsas">Cantidad de bolsas</string>
+    <string name="hint_contenedor">Selecciona el tipo de contenedor</string>
+    <string name="btn_agregar">Agregar</string>
+    <string name="estadisticas">Estadísticas</string>
+
+    <string-array name="tipos_contenedor">
+        <item>Papel</item>
+        <item>Plástico</item>
+        <item>Orgánico</item>
+        <item>Vidrio</item>
+    </string-array>
 </resources>

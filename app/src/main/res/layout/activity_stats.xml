@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Campo para ingresar la fecha en la que se depositaron residuos -->
+        <EditText
+            android:id="@+id/editFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de registro (YYYY-MM-DD)"
+            android:inputType="date"
+            android:padding="8dp"
+            android:minHeight="48dp" />
+
+        <!-- Campo para ingresar la cantidad de bolsas -->
+        <EditText
+            android:id="@+id/editBolsas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cantidad de bolsas"
+            android:inputType="number"
+            android:padding="8dp"
+            android:minHeight="48dp" />
+
+        <!-- Spinner para seleccionar el tipo de contenedor -->
+        <Spinner
+            android:id="@+id/spinnerContenedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/tipos_contenedor"
+            android:padding="8dp"
+            android:minHeight="48dp" />
+
+        <!-- Botón para agregar el registro -->
+        <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:minHeight="48dp" />
+
+        <!-- Nueva sección para elegir la fecha del gráfico circular -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona una fecha para el gráfico circular"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+        <!-- Campo para seleccionar la fecha del gráfico circular -->
+        <EditText
+            android:id="@+id/editFechaCircular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha (YYYY-MM-DD)"
+            android:inputType="date"
+            android:padding="8dp"
+            android:minHeight="48dp" />
+
+        <!-- Nueva sección para elegir el tramo temporal para los gráficos de barras -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona un tramo temporal para los gráficos de barras"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+        <!-- Campo para seleccionar la fecha de inicio -->
+        <EditText
+            android:id="@+id/editFechaInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de inicio (YYYY-MM-DD)"
+            android:inputType="date"
+            android:padding="8dp"
+            android:minHeight="48dp" />
+
+        <!-- Campo para seleccionar la fecha de fin -->
+        <EditText
+            android:id="@+id/editFechaFin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de fin (YYYY-MM-DD)"
+            android:inputType="date"
+            android:padding="8dp"
+            android:minHeight="48dp" />
+
+        <!-- Botón para mostrar los gráficos según el tramo temporal -->
+        <Button
+            android:id="@+id/btnMostrarGraficos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar Gráficos"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:minHeight="48dp" />
+
+        <!-- Layout horizontal para mostrar los gráficos lado a lado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <!-- Gráfico para mostrar la distribución de bolsas por contenedor (GraficoCircular) -->
+            <com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.view.GraficoCircular
+                android:id="@+id/chartContenedor"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp" />
+
+            <!-- Gráfico para mostrar las bolsas por día (GraficoBarras) -->
+            <com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.view.GraficoBarras
+                android:id="@+id/chartDia"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
