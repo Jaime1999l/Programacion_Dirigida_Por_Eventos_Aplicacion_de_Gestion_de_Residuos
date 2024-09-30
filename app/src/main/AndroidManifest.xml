@@ -12,6 +12,10 @@
             android:name="com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity.MapActivity"
             android:exported="false" />
 
+        <activity
+            android:name="com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity.StatsActivity"
+            android:exported="false" />
+
         <!-- Declarar la actividad principal -->
         <activity
             android:name="com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.PantallaPrincipal"
