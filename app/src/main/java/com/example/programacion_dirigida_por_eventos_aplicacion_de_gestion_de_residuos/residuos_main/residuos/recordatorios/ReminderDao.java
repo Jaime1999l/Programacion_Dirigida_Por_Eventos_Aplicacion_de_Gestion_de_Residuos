@@ -1,4 +1,4 @@
-package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.recordatorios;
+package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.recordatorios;
 
 import androidx.room.Dao;
 import androidx.room.Insert;

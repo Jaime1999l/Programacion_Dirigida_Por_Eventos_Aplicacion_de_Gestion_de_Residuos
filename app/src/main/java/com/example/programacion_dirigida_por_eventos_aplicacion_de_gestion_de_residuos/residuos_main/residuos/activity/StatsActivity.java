@@ -1,4 +1,4 @@
-package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity;
+package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,11 +8,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.R;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.view.GraficoBarras;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.view.GraficoCircular;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.database.DatabaseResiduos;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos.Residuos;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos.estadisticas.Estadistica;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.view.GraficoBarras;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.view.GraficoCircular;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.database.DatabaseResiduos;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.residuos.Residuos;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.residuos.estadisticas.Estadistica;
 import android.os.AsyncTask;
 import java.util.ArrayList;
 import java.util.List;

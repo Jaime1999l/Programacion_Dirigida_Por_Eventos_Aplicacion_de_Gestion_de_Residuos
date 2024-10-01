@@ -1,4 +1,4 @@
-package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos;
+package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.residuos;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

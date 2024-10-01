@@ -1,4 +1,4 @@
-package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity;
+package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.activity;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
@@ -11,9 +11,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.R;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.database.DatabaseResiduos;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.recordatorios.Reminder;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos.Residuos;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.database.DatabaseResiduos;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.recordatorios.Reminder;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.residuos.Residuos;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

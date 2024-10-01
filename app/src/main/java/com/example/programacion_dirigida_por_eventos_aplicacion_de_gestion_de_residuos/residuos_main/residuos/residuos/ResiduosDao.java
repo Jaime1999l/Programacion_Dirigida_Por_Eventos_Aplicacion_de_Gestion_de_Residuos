@@ -1,11 +1,10 @@
-package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos;
+package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.residuos;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos.Residuos;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos.estadisticas.Estadistica;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.residuos.estadisticas.Estadistica;
 
 import java.util.List;
 

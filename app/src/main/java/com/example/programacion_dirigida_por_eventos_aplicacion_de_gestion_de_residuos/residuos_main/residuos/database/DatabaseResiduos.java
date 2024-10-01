@@ -1,14 +1,14 @@
-package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.database;
+package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.database;
 
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import android.content.Context;
 
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.recordatorios.Reminder;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.recordatorios.ReminderDao;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos.Residuos;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos.ResiduosDao;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.recordatorios.Reminder;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.recordatorios.ReminderDao;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.residuos.Residuos;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.residuos.ResiduosDao;
 
 @Database(entities = {Residuos.class, Reminder.class}, version = 2)
 public abstract class DatabaseResiduos extends RoomDatabase {

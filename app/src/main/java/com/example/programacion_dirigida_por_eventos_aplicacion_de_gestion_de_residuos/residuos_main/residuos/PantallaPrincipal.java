@@ -1,8 +1,7 @@
-package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos;
+package com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,10 +9,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity.StatsActivity;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity.CalendarActivity;
-import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity.MapActivity;
-import com.google.android.material.navigation.NavigationView;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.R;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.activity.StatsActivity;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.activity.CalendarActivity;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.activity.MapActivity;
 
 public class PantallaPrincipal extends AppCompatActivity {
 

@@ -120,7 +120,7 @@
             android:gravity="center_horizontal">
 
             <!-- Gráfico para mostrar la distribución de bolsas por contenedor (GraficoCircular) -->
-            <com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.view.GraficoCircular
+            <com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.view.GraficoCircular
                 android:id="@+id/chartContenedor"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -128,7 +128,7 @@
                 android:layout_marginTop="16dp" />
 
             <!-- Gráfico para mostrar las bolsas por día (GraficoBarras) -->
-            <com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.view.GraficoBarras
+            <com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos_main.residuos.view.GraficoBarras
                 android:id="@+id/chartDia"
                 android:layout_width="0dp"
                 android:layout_height="150dp"

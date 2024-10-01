@@ -1,0 +1,26 @@
+@startuml
+actor Usuario
+
+rectangle "Aplicación Gestión de Residuos" {
+    usecase "Registrar Residuos" as UC1
+    usecase "Consultar Residuos por Fecha" as UC2
+    usecase "Agregar Recordatorio" as UC3
+    usecase "Visualizar Recordatorios por Fecha" as UC4
+    usecase "Agregar Punto de Reciclaje" as UC5
+    usecase "Visualizar Puntos de Reciclaje" as UC6
+    usecase "Consultar Estadísticas" as UC7
+    usecase "Visualizar Gráfico Circular" as UC8
+    usecase "Visualizar Gráfico de Barras" as UC9
+}
+
+Usuario --> UC1 : Interactúa
+Usuario --> UC2 : Interactúa
+Usuario --> UC3 : Interactúa
+Usuario --> UC4 : Interactúa
+Usuario --> UC5 : Interactúa
+Usuario --> UC6 : Interactúa
+Usuario --> UC7 : Interactúa
+Usuario --> UC8 : Interactúa
+Usuario --> UC9 : Interactúa
+
+@enduml
