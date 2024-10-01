@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.R;
 import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.database.DatabaseResiduos;
 import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.recordatorios.Reminder;
+import com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.residuos.Residuos;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -23,6 +24,7 @@ public class CalendarActivity extends AppCompatActivity {
 
     private TextView nextCollectionText;
     private EditText reminderText;
+    private TextView residuosTextView; // Vinculación de residuosTextView
     private final Calendar selectedDate = Calendar.getInstance();
     private DatabaseResiduos database;
 
@@ -36,6 +38,7 @@ public class CalendarActivity extends AppCompatActivity {
         nextCollectionText = findViewById(R.id.nextCollectionText);
         Button setReminderButton = findViewById(R.id.setReminderButton);
         reminderText = findViewById(R.id.reminderText);
+        residuosTextView = findViewById(R.id.residuosTextView); // Conexión del TextView
 
         database = DatabaseResiduos.getDatabase(this);
 
@@ -43,16 +46,18 @@ public class CalendarActivity extends AppCompatActivity {
         calendarView.setOnDateChangeListener((view, year, month, dayOfMonth) -> {
             selectedDate.set(year, month, dayOfMonth);
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
-            nextCollectionText.setText("Próxima recolección: " + dateFormat.format(selectedDate.getTime()));
+            String formattedDate = dateFormat.format(selectedDate.getTime());
+            nextCollectionText.setText("Próxima recolección: " + formattedDate);
 
             // Cargar y mostrar recordatorios para la fecha seleccionada
             loadRemindersForSelectedDate();
+
+            // Mostrar residuos depositados para la fecha seleccionada
+            mostrarResiduosPorFecha(formattedDate); // Llamada al método para mostrar los residuos
         });
 
         // Agregar evento al botón para configurar un recordatorio
-        setReminderButton.setOnClickListener(v -> {
-            saveReminder();
-        });
+        setReminderButton.setOnClickListener(v -> saveReminder());
     }
 
     private void saveReminder() {
@@ -90,5 +95,24 @@ public class CalendarActivity extends AppCompatActivity {
             });
         });
     }
-}
 
+    // Método para mostrar los residuos depositados en la fecha seleccionada
+    private void mostrarResiduosPorFecha(String fecha) {
+        AsyncTask.execute(() -> {
+            List<Residuos> residuosList = database.residuosDao().obtenerResiduosPorFecha(fecha);
+            runOnUiThread(() -> {
+                if (!residuosList.isEmpty()) {
+                    StringBuilder residuosInfo = new StringBuilder("Residuos depositados:\n");
+                    for (Residuos residuos : residuosList) {
+                        residuosInfo.append("Bolsas: ").append(residuos.getBolsas())
+                                .append(" Contenedor: ").append(residuos.getTipoContenedor())
+                                .append("\n");
+                    }
+                    residuosTextView.setText(residuosInfo.toString()); // Actualizar el residuosTextView
+                } else {
+                    residuosTextView.setText("No hay residuos depositados en esta fecha");
+                }
+            });
+        });
+    }
+}

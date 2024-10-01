@@ -36,5 +36,15 @@
         android:layout_height="wrap_content"
         android:text="Agregar recordatorio" />
 
-</LinearLayout>
+    <!-- Texto que mostrará los residuos depositados en la fecha seleccionada -->
+    <TextView
+        android:id="@+id/residuosTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Residuos depositados aparecerán aquí..."
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="visible" />
 
+</LinearLayout>
