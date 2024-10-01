@@ -30,8 +30,6 @@
         <activity
             android:name="com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity.CalendarActivity"
             android:exported="false" />
-        <receiver android:name="com.example.programacion_dirigida_por_eventos_aplicacion_de_gestion_de_residuos.activity.ReminderReceiver"
-            android:exported="false"/>
 
     </application>
 </manifest>
