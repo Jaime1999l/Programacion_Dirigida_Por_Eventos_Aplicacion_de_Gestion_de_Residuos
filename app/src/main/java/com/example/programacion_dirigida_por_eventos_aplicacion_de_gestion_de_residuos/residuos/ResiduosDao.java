@@ -38,4 +38,8 @@ public interface ResiduosDao {
     // Obtener estadísticas por día en un tramo de fechas (para gráfico de barras)
     @Query("SELECT fecha, SUM(bolsas) as totalBolsas FROM registro_residuos WHERE fecha BETWEEN :fechaInicio AND :fechaFin GROUP BY fecha")
     List<Estadistica> obtenerEstadisticasPorDiaEnTramo(String fechaInicio, String fechaFin);
+
+    @Query("SELECT * FROM registro_residuos WHERE fecha = :fecha")
+    List<Residuos> obtenerResiduosPorFecha(String fecha);
+
 }
