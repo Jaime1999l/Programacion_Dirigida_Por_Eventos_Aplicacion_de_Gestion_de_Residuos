@@ -56,6 +56,7 @@ La aplicación incluye las siguientes características principales:
 2. **Caso de uso 2 - Consultar residuos por fecha**: El usuario selecciona una fecha en el calendario y se muestra la cantidad de residuos depositados en esa fecha.
 3. **Caso de uso 3 - Visualizar puntos de reciclaje en el mapa**: El usuario puede ver y agregar puntos de reciclaje interactuando con el mapa.
 4. **Caso de uso 4 - Consultar estadísticas**: El usuario selecciona un tramo temporal y/o una fecha específica para visualizar gráficos que muestran las cantidades de residuos depositados por contenedor o por día.
+5. **Caso de uso 5 - Visualizar recordatorios.
 
 ---
 
