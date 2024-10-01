@@ -97,9 +97,15 @@ public class CalendarActivity extends AppCompatActivity {
     }
 
     // Método para mostrar los residuos depositados en la fecha seleccionada
-    private void mostrarResiduosPorFecha(String fecha) {
+    private void mostrarResiduosPorFecha(String fechaSeleccionada) {
+        // Asegúrate de que el formato de la fecha sea el mismo que el utilizado en la base de datos
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        String formattedDate = dateFormat.format(selectedDate.getTime()); // Convertimos la fecha seleccionada a String
+
         AsyncTask.execute(() -> {
-            List<Residuos> residuosList = database.residuosDao().obtenerResiduosPorFecha(fecha);
+            // Usamos la fecha formateada para obtener los residuos
+            List<Residuos> residuosList = database.residuosDao().obtenerResiduosPorFecha(formattedDate);
+
             runOnUiThread(() -> {
                 if (!residuosList.isEmpty()) {
                     StringBuilder residuosInfo = new StringBuilder("Residuos depositados:\n");
@@ -108,7 +114,7 @@ public class CalendarActivity extends AppCompatActivity {
                                 .append(" Contenedor: ").append(residuos.getTipoContenedor())
                                 .append("\n");
                     }
-                    residuosTextView.setText(residuosInfo.toString()); // Actualizar el residuosTextView
+                    residuosTextView.setText(residuosInfo.toString()); // Actualizamos el TextView con los residuos
                 } else {
                     residuosTextView.setText("No hay residuos depositados en esta fecha");
                 }
