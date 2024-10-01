@@ -12,13 +12,22 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp" />
 
-    <!-- Texto que mostrará la próxima fecha de recolección -->
+    <!-- Texto que mostrará la próxima fecha de recolección y recordatorios para ese día -->
     <TextView
         android:id="@+id/nextCollectionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Próxima recolección:"
-        android:textSize="18sp" />
+        android:text="Añadir nota:"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Campo de entrada para escribir el recordatorio -->
+    <EditText
+        android:id="@+id/reminderText"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:hint="Escribe un recordatorio"
+        android:layout_marginBottom="16dp"/>
 
     <!-- Botón para agregar recordatorio manualmente -->
     <Button
@@ -26,4 +35,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Agregar recordatorio" />
+
 </LinearLayout>
+
